@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+body {
+	font-family: "Handjet", sans-serif;
+	margin:0;
+	padding: 0;
+}
+h1 {
+	font-size: 13vmin;
+	font-weight: 200;
+	font-family: "Libre Caslon Text", serif;
+	text-transform: lowercase;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin:0;
+	box-sizing: border-box;
+	width: 100%;
+}
+.secondary {
+	text-decoration: line-through;
+	text-decoration-style: dashed;
+	text-decoration-thickness: 2px;
+	text-align: right;
+}
+.hero {
+	width: 90vmin;
+	height: 90vmin;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	padding-top: 50px;
+	padding-bottom: 5vmin;
+	box-sizing: border-box;
+}
+.heroContents {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.bottom {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative
+}
+.bottom > :nth-child(2) {
+	text-align: right;
+}
+.nav {
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	height: 50px;
+	border: solid 2px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	z-index: 3;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0;
+	transition: 0.2s;
+	border-color: black;
+	box-sizing: border-box;
+}
+.nav > img {
+	max-height: 50px;
+}
+.nav > p {
+	padding: 10px;
+	box-sizing: border-box;
+}
+.nav:hover {
+	border-width: 4px;
+}
+
+.content {
+	position: absolute;
+	top: 95vh;
+	left: 50%;
+	translate: -50% 0;
+	width: 90vmin;
+	padding-bottom: 100px;
+}
+.content > img{
+	width: 100%;
+}
+
+video, .youtube {
+	width: 100%;
+	aspect-ratio: 16/9;
+	border: none;
+	filter: grayscale();
+	-webkit-filter: grayscale();
+}
+
+#foldout {
+	background-color: rgb(10, 10, 10);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5vmin;
+	flex-direction: column;
+	transition: 0.2s;
+	font-size: min(max(12px,10vmin),50px);
+}
+#foldout > a {
+	color: white;
+	text-decoration: none;
+	font-weight: 200;
+	transition: 0.2s;
+}
+#foldout > a:hover {
+	font-weight: 400;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	width: 100%;
+	padding: 5px;
+}
