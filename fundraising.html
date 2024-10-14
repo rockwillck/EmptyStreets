@@ -28,14 +28,27 @@
         <h2>Our Role</h2>
         <p>Empty Streets is an organization that acts as a bridge between human trafficking shelters and potential donors. Our goal is to facilitate more donations and fundraisers for these shelters. We raise funds by going door-to-door to spread awareness and by selling baked goods.</p>
 		<h2>Donations</h2>
-		<p>We collect donations online (through the <a href="https://www.gofundme.com/f/join-us-to-support-human-trafficking-survivors">donate link</a> in the menu), door-to-door, and on campus. We're working towards our goal, and you can see our progress below!</p>
+		<p>We collect donations online (through the <a href="https://www.gofundme.com/f/join-us-to-support-human-trafficking-survivors">donate link</a> in the menu), door-to-door, and on campus. We're working towards our goal, and you can see our progress below - live!</p>
 		<div class="meter">
-			$10,000
+			<span id="met">...</span>
 			<div class="meterTube">
-				<div id="meterFluid">$2,700</div>
+				<div id="meterFluid">...</div>
 			</div>
 		</div>
     </div>
 	<script src="app.js"></script>
+	<script>
+		goal = 10000
+		fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4KCn3BINKXamOpg8_E8igeNExFfCwmxFKBXhi0c0q20t4Z6P6Kdnurn2SxSYhcvobN-G1ogsk0x4A/pub?gid=1768224157&single=true&output=csv").then(
+			x => x.text()
+		).then(
+			x => {
+				let don = parseFloat(x.replace("$", "").replaceAll("\"", "").replaceAll(",", ""))
+				document.getElementById("meterFluid").style.width = don/100 + "%"
+				document.getElementById("meterFluid").innerText = "$" + don
+				document.getElementById("met").innerText = "$" + goal
+			}
+		)
+	</script>
 </body>
 </html>
