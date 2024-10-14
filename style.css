@@ -139,16 +139,41 @@ footer {
 a {
 	color: rgb(175, 175, 219);
 }
-.comingsoon {
+.comingsoon, .team {
 	display: flex;
 	flex-wrap: wrap;
 }
-.school {
+.school, .member {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	padding: 10px 10px 10px 0px;
 }
-.school > img {
+.school > img, .member > img {
 	max-width: 200px;
+}
+
+.member { 
+	margin-right: 30px;
+}
+
+.meter {
+	text-align: right;
+}
+.meterTube {
+	border: solid;
+	position: relative;
+	height: 25px;
+}
+#meterFluid {
+	position: absolute;
+	width: 27%;
+	height: 100%;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding-right: 10px;
+	box-sizing: border-box;
 }
