@@ -29,9 +29,9 @@ function submenu(x) {
 		case "about":
 			cont = `
 		<button onclick="submenu('orig')"><</button>
-		<a href="fundraising.html">Our Team</a>
-		<a href="community.html">Our Mission</a>
-		<a href="contact.html">Our Timeline</a>`
+		<a href="team.html">Our Team</a>
+		<a href="mission.html">Our Mission</a>
+		<a href="timeline.html">Our Timeline</a>`
 			break;
 	}
 	document.getElementById("foldout").innerHTML = cont
