@@ -34,17 +34,31 @@
                 <h3>Cy-Fair</h3>
                 <a href="mailto:emptystreetss@gmail.com">Email</a>
                 <a href="https://sites.google.com/view/empty-streets/home">Website</a>
-                <p>Insta: @cfhs_emptystreets</p>
+                <a>Insta: @cfhs_emptystreets</a>
             </div>
             <div class="school">
                 <img src="assets/imgs/bridgeland.png">
                 <h3>Bridgeland</h3>
-                <p>Insta: @bhs_emptystreets</p>
+                <a>Insta: @bhs_emptystreets</a>
             </div>
             <div class="school">
                 <img src="assets/imgs/cyfalls.png">
                 <h3>Cy-Falls</h3>
-                <p>Insta: @cyfalls_emptystreets</p>
+                <a>Insta: @cyfalls_emptystreets</a>
+            </div>
+            <div class="school">
+                <img src="assets/imgs/cyridge.png">
+                <h3>Cy-Ridge</h3>
+                <a>Insta: @crhs_emptystreets</a>
+            </div>
+            <div class="school">
+                <img src="assets/imgs/jersey.png">
+                <h3>Jersey Village</h3>
+                <a>Insta: @jvhs_emptystreets</a>
+            </div>
+            <div class="school">
+                <img src="assets/imgs/cincoranch.png">
+                <h3>Cinco Ranch</h3>
             </div>
         </div>
         <h2>Coming Soon</h2>
@@ -69,12 +83,15 @@
                 <img src="assets/imgs/pearland.png">
                 <h3>Pearland</h3>
             </div>
-            <div class="school">
-                <img src="assets/imgs/jersey.png">
-                <h3>Jersey Village</h3>
-            </div>
         </div>
 	</div>
 	<script src="app.js"></script>
+    <script>
+        for (let a of document.getElementsByTagName('a')) {
+            if (a.innerText.trim().startsWith("Insta: ")) {
+                a.href = `https://www.instagram.com/${a.innerText.split("@")[1].trim()}/`
+            }
+        }
+    </script>
 </body>
 </html>

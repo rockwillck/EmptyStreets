@@ -1,12 +1,6 @@
 onload = () => {
-    document.body.innerHTML += `<div id="foldout">
-		<a href="index.html">Home</a>
-		<a href="about.html">About</a>
-		<a href="fundraising.html">Fundraising</a>
-		<a href="community.html">Community</a>
-		<a href="contact.html">Contact</a>
-		<a href="https://www.gofundme.com/f/join-us-to-support-human-trafficking-survivors">Donate</a>
-	</div>`
+    document.body.innerHTML += `<div id="foldout"></div>`
+	submenu("orig")
     document.getElementById("foldout").style.left = 0
     changeMenu()
 
@@ -19,4 +13,26 @@ onload = () => {
 function changeMenu() {
     document.getElementById("menuBTN").innerText = parseInt(document.getElementById("foldout").style.left) == 0 ? "MENU" : "CLOSE"
     document.getElementById("foldout").style.left = parseInt(document.getElementById("foldout").style.left) == 0 ? "-100vw" : 0
+}
+
+function submenu(x) {
+	let cont
+	switch (x) {
+		case "orig":
+			cont = `<a href="index.html">Home</a>
+	<button onclick="submenu('about')">About</button>
+	<a href="fundraising.html">Fundraising</a>
+	<a href="community.html">Community</a>
+	<a href="contact.html">Contact</a>
+	<a href="https://www.gofundme.com/f/join-us-to-support-human-trafficking-survivors">Donate</a>`
+			break;
+		case "about":
+			cont = `
+		<button onclick="submenu('orig')"><</button>
+		<a href="fundraising.html">Our Team</a>
+		<a href="community.html">Our Mission</a>
+		<a href="contact.html">Our Timeline</a>`
+			break;
+	}
+	document.getElementById("foldout").innerHTML = cont
 }

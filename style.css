@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
 
+:root {
+	--main: rgb(50, 115, 141);
+	--bg: rgb(217, 234, 235);
+}
+
 body {
 	font-family: "Handjet", sans-serif;
 	margin:0;
 	padding: 0;
+	color: var(--main);
+	background-color: var(--bg);
 }
 h1 {
 	font-size: 13vmin;
@@ -61,13 +68,14 @@ h1 {
 	border: solid 2px;
 	display: flex;
 	align-items: center;
-	background-color: white;
+	background-color: var(--bg);
 	z-index: 3;
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0;
 	transition: 0.2s;
 	border-color: black;
+	color: black;
 	box-sizing: border-box;
 }
 .nav > img {
@@ -78,7 +86,7 @@ h1 {
 	box-sizing: border-box;
 }
 .nav:hover {
-	border-width: 4px;
+	border-width: 3px;
 }
 
 .content {
@@ -97,12 +105,10 @@ video, .youtube {
 	width: 100%;
 	aspect-ratio: 16/9;
 	border: none;
-	filter: grayscale();
-	-webkit-filter: grayscale();
 }
 
 #foldout {
-	background-color: rgb(10, 10, 10);
+	background-color: var(--main);
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -117,27 +123,33 @@ video, .youtube {
 	transition: 0.2s;
 	font-size: min(max(12px,10vmin),50px);
 }
-#foldout > a {
+#foldout > * {
 	color: white;
 	text-decoration: none;
 	font-weight: 200;
 	transition: 0.2s;
+	font-family: inherit;
+	background-color: transparent;
+	border: none;
+	font-size: inherit;
 }
-#foldout > a:hover {
+#foldout > *:hover {
 	font-weight: 400;
 }
 
 footer {
 	position: absolute;
 	bottom: 0;
-	background-color: black;
+	background-color: var(--main);
 	color: white;
 	width: 100%;
 	padding: 5px;
 }
 
 a {
-	color: rgb(175, 175, 219);
+	background-color: var(--main);
+	color: skyblue;
+	padding: 5px;
 }
 .comingsoon, .team {
 	display: flex;
@@ -169,7 +181,7 @@ a {
 	position: absolute;
 	width: 27%;
 	height: 100%;
-	background-color: black;
+	background-color: var(--main);
 	color: white;
 	display: flex;
 	justify-content: end;
