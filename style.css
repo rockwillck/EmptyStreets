@@ -147,10 +147,18 @@ footer {
 }
 
 a {
-	background-color: var(--main);
-	color: skyblue;
-	padding: 5px;
+	color: var(--main);
+	padding: 2px;
+	margin-bottom: 2px;
+	background-color: rgba(50, 115, 141,0.1);
 }
+
+footer > * > a {
+	padding: 0;
+	border: none;
+	color: white;
+}
+
 .comingsoon, .team {
 	display: flex;
 	flex-wrap: wrap;
