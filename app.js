@@ -20,7 +20,7 @@ function submenu(x) {
 	switch (x) {
 		case "orig":
 			cont = `<a href="index.html">Home</a>
-	<button onclick="submenu('about')">About</button>
+	<button onclick="submenu('about')">About ></button>
 	<a href="fundraising.html">Fundraising</a>
 	<a href="community.html">Community</a>
 	<a href="contact.html">Contact</a>
