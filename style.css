@@ -197,3 +197,64 @@ footer > * > a {
 	padding-right: 10px;
 	box-sizing: border-box;
 }
+
+.slidesFrame {
+	width: 100%;
+	overflow: scroll;
+	padding: 0;
+	margin-bottom: 25px !important;
+}
+.slidesLong {
+	aspect-ratio: 1/0.5625;
+}
+
+.imagesSlides {
+	position: relative;
+	overflow-x: scroll;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 0;
+}
+.imagesSlides > img {
+	height: 100%;
+	display: inline;
+	box-sizing: border-box;
+}
+
+.slideControls {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	translate: 0 -25px;
+	margin-bottom: 25px !important;
+	background-color: transparent;
+	backdrop-filter: none;
+	box-shadow: none;
+}
+.leftRight {
+	position: absolute;
+	margin: 10px;	
+	background-color: var(--main);
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+	backdrop-filter: blur(10px);
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	border-radius: 100vmin;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+	border: none;
+	color: var(--bg);
+}
+.lrl {
+	left: 0;
+}
+.lrr {
+	left: 50px;
+}
