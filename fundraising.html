@@ -38,13 +38,13 @@
     </div>
 	<script src="app.js"></script>
 	<script>
-		goal = 10000
+		goal = 20000
 		fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4KCn3BINKXamOpg8_E8igeNExFfCwmxFKBXhi0c0q20t4Z6P6Kdnurn2SxSYhcvobN-G1ogsk0x4A/pub?gid=1768224157&single=true&output=csv").then(
 			x => x.text()
 		).then(
 			x => {
 				let don = parseFloat(x.replace("$", "").replaceAll("\"", "").replaceAll(",", ""))
-				document.getElementById("meterFluid").style.width = don/100 + "%"
+				document.getElementById("meterFluid").style.width = (don/goal*100 > 100 ? 100 : don/goal*100) + "%"
 				document.getElementById("meterFluid").innerText = "$" + don
 				document.getElementById("met").innerText = "$" + goal
 			}

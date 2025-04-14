@@ -176,6 +176,13 @@ footer > * > a {
 .member { 
 	margin-right: 30px;
 }
+.member > img {
+	border-radius: 100vmin;
+	max-width: 150px;
+}
+.member > h2 {
+	max-width: 200px;
+}
 
 .meter {
 	text-align: right;
